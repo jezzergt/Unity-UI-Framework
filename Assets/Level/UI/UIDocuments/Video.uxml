@@ -1,0 +1,67 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Level/UI/StyleSheets/MenuButtons.uss?fileID=7433441132597879392&amp;guid=e072f7f4662ddae4fbb0ae74c96067e3&amp;type=3#MenuButtons" />
+    <Style src="project://database/Assets/Level/UI/StyleSheets/MenuContainer.uss?fileID=7433441132597879392&amp;guid=5f6202b616bae84478451c81e971597f&amp;type=3#MenuContainer" />
+    <Style src="project://database/Assets/Level/UI/StyleSheets/TitleText.uss?fileID=7433441132597879392&amp;guid=e9ff4a6e3f89431498844270f2bc0fc0&amp;type=3#TitleText" />
+    <ui:VisualElement name="Container" class="container" style="flex-grow: 1; background-color: rgb(165, 170, 195); background-image: url(&apos;project://database/Assets/Art/Textures/wp2370512-gradient-hd-wallpapers.jpg?fileID=2800000&amp;guid=040062a21699ca64f94974dca614055b&amp;type=3#wp2370512-gradient-hd-wallpapers&apos;);">
+        <ui:VisualElement name="TitleContainer" class="text" style="flex-grow: 1; flex-basis: 10%; margin-top: 0; margin-right: 25px; margin-bottom: 0; margin-left: 25px; padding-top: 10px;">
+            <ui:Label tabindex="-1" text="PROJECT TEMPLATE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TitleText" class="text" />
+        </ui:VisualElement>
+        <ui:VisualElement name="BodyContainer" style="flex-grow: 1; flex-direction: row; margin-bottom: 0; margin-top: 20px; -unity-font-definition: initial; flex-basis: 40%; background-color: rgba(0, 0, 0, 0.3);">
+            <ui:VisualElement name="NavContainer" class="container" style="flex-grow: 1; flex-basis: 30%; flex-direction: column; justify-content: center; align-self: auto; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 80px; -unity-text-align: upper-right; flex-wrap: nowrap; align-items: center;">
+                <ui:Button text="VIDEO" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonVideo" class="button" style="color: rgb(255, 208, 124);" />
+                <ui:Button text="AUDIO" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonAudio" class="button" />
+                <ui:Button text="CONTROLS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonControls" class="button" />
+                <ui:Button text="BACK" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonBack" class="button" />
+            </ui:VisualElement>
+            <ui:VisualElement name="ContentContainer" style="flex-grow: 1; flex-basis: 70%; justify-content: flex-end; align-self: auto; flex-direction: row; margin-top: 0; margin-bottom: 0; margin-right: 0; margin-left: 0; padding-top: 80px; padding-right: 0; padding-bottom: 80px; padding-left: 20px;">
+                <ui:VisualElement name="LabelContainer" style="flex-grow: 0; flex-basis: auto; justify-content: space-between; align-items: center; align-self: auto;">
+                    <ui:Label tabindex="-1" text="Resolution" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ResolutionLabel" class="menutext label" style="-unity-text-align: middle-center; justify-content: flex-start;" />
+                    <ui:Label tabindex="-1" text="Screen Mode" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ScreenModeLabel" class="menutext label" style="-unity-text-align: upper-center;" />
+                    <ui:Label tabindex="-1" text="Frame Rate" parse-escape-sequences="true" display-tooltip-when-elided="true" name="FrameRateLabel" class="menutext label" style="-unity-text-align: upper-center;" />
+                    <ui:Label tabindex="-1" text="Graphics Quality" parse-escape-sequences="true" display-tooltip-when-elided="true" name="GraphicsQualityLabel" class="menutext label" style="-unity-text-align: upper-center;" />
+                    <ui:Label tabindex="-1" text="Anti-Aliasing" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Anti-AliasingLabel" class="menutext label" style="-unity-text-align: upper-center;" />
+                    <ui:Label tabindex="-1" text="V-Sync" parse-escape-sequences="true" display-tooltip-when-elided="true" name="VsyncLabel" class="menutext label" style="-unity-text-align: upper-center;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="SettingContainer" style="flex-grow: 1; flex-direction: column; justify-content: space-between; align-items: center; flex-basis: 100%; margin-left: 20px; height: 534px;">
+                    <ui:VisualElement name="Resolution" style="flex-grow: 0; padding-top: 0; padding-bottom: 0; flex-shrink: 0; justify-content: flex-start; padding-right: 0; padding-left: 0; align-self: stretch; flex-direction: row;">
+                        <ui:Button text="&lt;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonPrevious" class="button-arrows" style="-unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&apos;); font-size: 26px; color: rgb(255, 255, 255); background-color: rgba(188, 188, 188, 0);" />
+                        <ui:Label tabindex="-1" parse-escape-sequences="true" display-tooltip-when-elided="true" name="LabelCurrentResolution" text="Resolution Label" class="label" style="align-items: auto; align-self: flex-start; justify-content: flex-start; -unity-text-align: middle-center; flex-basis: 20%; flex-grow: 0; padding-left: 1px; margin-left: 0; margin-right: 0;" />
+                        <ui:Button text="&gt;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonNext" class="button-arrows" style="-unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Roboto-Bold.ttf?fileID=12800000&amp;guid=4beb055f07aaff244873dec698d0363e&amp;type=3#Roboto-Bold&apos;);" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="ScreenMode" style="flex-grow: 0; padding-top: 0; padding-bottom: 0; flex-shrink: 0; justify-content: flex-start; padding-right: 0; padding-left: 0; align-self: stretch; flex-direction: row; align-items: stretch;">
+                        <ui:Button text="WINDOWED" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonWindowed" class="button-options screenmode-options" style="background-color: rgba(0, 0, 0, 0);" />
+                        <ui:Button text="FULLSCREEN" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonFullscreen" class="button-options screenmode-options" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="FrameRate" style="flex-grow: 0; padding-top: 0; padding-bottom: 0; flex-shrink: 0; justify-content: center; padding-right: 0; padding-left: 0; align-self: flex-start; flex-direction: row; -unity-text-align: upper-left;">
+                        <ui:Button text="30 FPS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Button30" class="button-options" />
+                        <ui:Button text="60 FPS" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Button60" class="button-options" />
+                        <ui:Button text="UNLIMITED" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonUnlimited" class="button-options" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="GraphicsQuality" style="flex-grow: 0; padding-top: 0; padding-bottom: 0; flex-shrink: 0; justify-content: center; padding-right: 0; padding-left: 0; align-self: flex-start; flex-direction: row;">
+                        <ui:Button text="LOW" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonGFXLow" class="button-options" />
+                        <ui:Button text="MEDIUM" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonGFXMedium" class="button-options" />
+                        <ui:Button text="HIGH" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonGFXHigh" class="button-options" />
+                        <ui:Button text="ULTRA" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonGFXUltra" class="button-options" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="AntiAliasing" style="flex-grow: 0; padding-top: 0; padding-bottom: 0; flex-shrink: 0; justify-content: flex-start; padding-right: 0; padding-left: 0; align-self: stretch; flex-direction: row;">
+                        <ui:Button text="OFF" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonAAOff" class="button-options" />
+                        <ui:Button text="FXAA" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonFXAAOn" class="button-options" />
+                        <ui:Button text="SMAA" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonSMAAOn" class="button-options" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="V-Sync" style="flex-grow: 0; padding-top: 0; padding-bottom: 0; flex-shrink: 0; justify-content: flex-start; padding-right: 0; padding-left: 0; align-self: stretch; flex-direction: row;">
+                        <ui:Button text="OFF" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonVsyncOff" class="button-options screenmode-options" style="align-self: auto;" />
+                        <ui:Button text="ON" parse-escape-sequences="true" display-tooltip-when-elided="true" name="ButtonVsyncOn" class="button-options screenmode-options" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="BackContainer" style="flex-grow: 1; position: absolute; right: 140px; top: 600px; flex-direction: row;">
+                    <ui:VisualElement style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Art/Textures/back-button2.png?fileID=2800000&amp;guid=d3ef53c141c4724429613eba322c170b&amp;type=3#back-button2&apos;); width: 40px; height: 40px; top: 3px; left: -10px;" />
+                    <ui:Label tabindex="-1" text="esc" parse-escape-sequences="true" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); font-size: 35px; -unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Bangers.ttf?fileID=12800000&amp;guid=5dd49b3eacc540408c98eee0de38e0f1&amp;type=3#Bangers&apos;); -unity-text-align: middle-center; padding-left: 8px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="ApplyContainer" style="flex-grow: 1; position: absolute; right: 300px; top: 600px; flex-direction: row; opacity: 0;">
+                    <ui:Label tabindex="-1" text="Enter" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 26px; color: rgb(255, 255, 255); -unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Bangers.ttf?fileID=12800000&amp;guid=5dd49b3eacc540408c98eee0de38e0f1&amp;type=3#Bangers&apos;); -unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgb(255, 208, 124); -unity-text-align: upper-center; padding-top: 0; padding-right: 6px; padding-bottom: 0; padding-left: 6px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); border-top-width: 3px; border-right-width: 3px; border-bottom-width: 3px; border-left-width: 3px;" />
+                    <ui:Label tabindex="-1" text="Apply" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="color: rgb(255, 255, 255); font-size: 18px; -unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Bangers.ttf?fileID=12800000&amp;guid=5dd49b3eacc540408c98eee0de38e0f1&amp;type=3#Bangers&apos;); -unity-text-align: middle-center; padding-left: 8px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

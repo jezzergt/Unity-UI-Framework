@@ -1,0 +1,21 @@
+.text {
+    -unity-font: url('project://database/Assets/TextMesh%20Pro/Examples%20&%20Extras/Fonts/Bangers.ttf?fileID=12800000&guid=5dd49b3eacc540408c98eee0de38e0f1&type=3#Bangers');
+    font-size: 140px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-left;
+    color: rgb(255, 255, 255);
+    margin-left: 80px;
+    -unity-text-outline-width: 2px;
+    -unity-text-outline-color: rgb(0, 0, 0);
+    text-shadow: -2px 3px 10px rgb(0, 0, 0);
+    -unity-font-definition: initial;
+    white-space: nowrap;
+    margin-top: 4px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    padding-top: 4px;
+    padding-right: 2px;
+    padding-bottom: 4px;
+    padding-left: 1px;
+    flex-basis: 100%;
+}
