@@ -12,3 +12,11 @@ Current Features Include:
 - Data serialisation & deserialisation supported.
 - Easily extendable
 - Performant
+
+TODO - Include detailed documentation of features & implementations.
+
+Planned Features:
+- Menu navigation with keyboard
+- Gamepad navigation
+- Separate controls section for gamepad
+- Improved UI animations
