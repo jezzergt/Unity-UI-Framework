@@ -169,10 +169,10 @@ Project Link: [https://github.com/jezzergt/2DProjectTemplate]
 
 
 * MainMenu Back Icon - <a href="https://www.flaticon.com/free-icons/go-back" title="go back icons">Go back icons created by Freepik - Flaticon</a>
-* MainMenu Background Image - (https://wallpapercave.com/u/payers88)
-* MainMenu Background Music - 'Within Our Nature' by Scott Buckley - released under CC-BY 4.0. (https://www.scottbuckley.com.au)
-* MainMenu UI Sound Effects - JDSherbert (https://jdsherbert.itch.io/ultimate-ui-sfx-pack)
-* Awesome Template - (https://github.com/othneildrew/Best-README-Template)
+* MainMenu Background Image - https://wallpapercave.com/u/payers88
+* MainMenu Background Music - 'Within Our Nature' by Scott Buckley - released under CC-BY 4.0. https://www.scottbuckley.com.au
+* MainMenu UI Sound Effects - JDSherbert https://jdsherbert.itch.io/ultimate-ui-sfx-pack
+* Awesome Template - https://github.com/othneildrew/Best-README-Template
 * [Choose an Open Source License](https://choosealicense.com)
 * [Img Shields](https://shields.io)
 
