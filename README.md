@@ -7,11 +7,11 @@
   <h1 align="center">Unity 2D (URP) Project Template</h1>
 
   <p align="center">
-    <a href="https://github.com/jezzergt/2DProjectTemplate/edit/main/README.md#getting-started">Get Started</a>
+    <a href="https://github.com/jezzergt/2DProjectTemplate/main/README.md#getting-started">Get Started</a>
     ·
-     <a href="https://github.com/jezzergt/2DProjectTemplate/edit/main/README.md#usage">Usage</a>
+     <a href="https://github.com/jezzergt/2DProjectTemplate/main/README.md#usage">Usage</a>
     ·
-     <a href="https://github.com/jezzergt/2DProjectTemplate/edit/main/README.md#roadmap">Roadmap</a>
+     <a href="https://github.com/jezzergt/2DProjectTemplate/main/README.md#roadmap">Roadmap</a>
     ·
     <a href="https://github.com/jezzergt/2DProjectTemplate/issues">Report Bug</a>
   </p>
