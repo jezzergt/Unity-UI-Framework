@@ -7,11 +7,11 @@
   <h1 align="center">Unity 2D (URP) Project Template</h1>
 
   <p align="center">
-    <a href="https://github.com/jezzergt/2DProjectTemplate/main/README.md#getting-started">Get Started</a>
+    <a href="https://github.com/jezzergt/2DProjectTemplate#getting-started">Get Started</a>
     ·
-     <a href="https://github.com/jezzergt/2DProjectTemplate/main/README.md#usage">Usage</a>
+     <a href="https://github.com/jezzergt/2DProjectTemplate#usage">Usage</a>
     ·
-     <a href="https://github.com/jezzergt/2DProjectTemplate/main/README.md#roadmap">Roadmap</a>
+     <a href="https://github.com/jezzergt/2DProjectTemplate#roadmap">Roadmap</a>
     ·
     <a href="https://github.com/jezzergt/2DProjectTemplate/issues">Report Bug</a>
   </p>
@@ -138,7 +138,7 @@ _Below is an example of how you can instruct your audience on installing and set
 - [ ] Load Game Panel
 - [ ] In-game Pause Screen
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/jezzergt/2DProjectTemplate/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -169,10 +169,10 @@ Project Link: [https://github.com/jezzergt/2DProjectTemplate]
 
 
 * MainMenu Back Icon - <a href="https://www.flaticon.com/free-icons/go-back" title="go back icons">Go back icons created by Freepik - Flaticon</a>
-* MainMenu Background Image - https://wallpapercave.com/u/payers88
-* MainMenu Background Music - 'Within Our Nature' by Scott Buckley - released under CC-BY 4.0. https://www.scottbuckley.com.au
-* MainMenu UI Sound Effects - JDSherbert https://jdsherbert.itch.io/ultimate-ui-sfx-pack
-* Awesome Template - https://github.com/othneildrew/Best-README-Template
+* MainMenu Background Image - (https://wallpapercave.com/u/payers88)
+* MainMenu Background Music - 'Within Our Nature' by Scott Buckley - released under CC-BY 4.0. (https://www.scottbuckley.com.au)
+* MainMenu UI Sound Effects - JDSherbert (https://jdsherbert.itch.io/ultimate-ui-sfx-pack)
+* Awesome Template - (https://github.com/othneildrew/Best-README-Template)
 * [Choose an Open Source License](https://choosealicense.com)
 * [Img Shields](https://shields.io)
 
@@ -182,14 +182,6 @@ Project Link: [https://github.com/jezzergt/2DProjectTemplate]
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
 [Made with Unity]: https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=for-the-badge&logo=unity
 [Unity-url]: https://unity.com 
 
