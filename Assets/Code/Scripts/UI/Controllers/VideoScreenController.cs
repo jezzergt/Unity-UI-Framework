@@ -394,7 +394,7 @@ namespace ProjectTemplate
 
             if (data.VsyncOff == 1)
             {
-                VideoScreen.VsyncOffButton.style.backgroundColor= MainMenuUIManager.SelectedButtonColor;
+                VideoScreen.VsyncOffButton.style.backgroundColor = MainMenuUIManager.SelectedButtonColor;
                 SetVsyncOff();
             }
 

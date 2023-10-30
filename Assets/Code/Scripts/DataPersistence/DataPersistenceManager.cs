@@ -96,6 +96,11 @@ namespace ProjectTemplate
 
             return new List<IDataPersistence>(dataPersistenceObjects);
         }
+
+        public GameData RetrieveGameData()
+        {
+            return _gameData;
+        }
     }
 }
 

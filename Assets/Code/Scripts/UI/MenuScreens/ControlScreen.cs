@@ -121,7 +121,7 @@ namespace ProjectTemplate
 
             BackInputPrimaryButton = Root.Q<Button>(_backInputbuttonPrimaryID);
             BackInputSecondaryButton = Root.Q<Button>(_backInputbuttonSecondaryID);
-            BackInputResetButton = Root.Q<Button>(_backInputbuttonSecondaryID);
+            BackInputResetButton = Root.Q<Button>(_backInputbuttonResetID);
 
             UpInputPrimaryButton = Root.Q<Button>(_upInputbuttonPrimaryID);
             UpInputSecondaryButton = Root.Q<Button>(_upInputbuttonSecondaryID);
@@ -154,6 +154,22 @@ namespace ProjectTemplate
             BackInputPrimaryButton?.RegisterCallback<ClickEvent>(ClickBackInputPrimaryButton);
             BackInputSecondaryButton?.RegisterCallback<ClickEvent>(ClickBackInputSecondaryButton);
             BackInputResetButton?.RegisterCallback<ClickEvent>(ClickBackInputResetButton);
+
+            UpInputPrimaryButton?.RegisterCallback<ClickEvent>(ClickUpInputPrimaryButton);
+            UpInputSecondaryButton?.RegisterCallback<ClickEvent>(ClickUpInputSecondaryButton);
+            UpInputResetButton?.RegisterCallback<ClickEvent>(ClickUpInputResetButton);
+
+            DownInputPrimaryButton?.RegisterCallback<ClickEvent>(ClickDownInputPrimaryButton);
+            DownInputSecondaryButton?.RegisterCallback<ClickEvent>(ClickDownInputSecondaryButton);
+            DownInputResetButton?.RegisterCallback<ClickEvent>(ClickDownInputResetButton);
+
+            LeftInputPrimaryButton?.RegisterCallback<ClickEvent>(ClickLeftInputPrimaryButton);
+            LeftInputSecondaryButton?.RegisterCallback<ClickEvent>(ClickLeftInputSecondaryButton);
+            LeftInputResetButton?.RegisterCallback<ClickEvent>(ClickLeftInputResetButton);
+
+            RightInputPrimaryButton?.RegisterCallback<ClickEvent>(ClickRightInputPrimaryButton);
+            RightInputSecondaryButton?.RegisterCallback<ClickEvent>(ClickRightInputSecondaryButton);
+            RightInputResetButton?.RegisterCallback<ClickEvent>(ClickRightInputResetButton);
         }
 
         #region Navigation Publishers

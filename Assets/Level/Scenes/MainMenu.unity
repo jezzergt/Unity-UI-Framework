@@ -467,7 +467,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 805abc053245a6d48a88cf22ef2042b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MasterUIDocument: {fileID: 377751822}
   HomeScreen: {fileID: 46611567}
   VideoScreen: {fileID: 1699460883}
   AudioScreen: {fileID: 437881379}
@@ -943,6 +942,7 @@ GameObject:
   - component: {fileID: 1947393771}
   - component: {fileID: 1947393773}
   - component: {fileID: 1947393772}
+  - component: {fileID: 1947393774}
   m_Layer: 0
   m_Name: HomeScreenController
   m_TagString: Untagged
@@ -994,6 +994,18 @@ MonoBehaviour:
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: e41ad6466d4552446b797210525d4303, type: 3}
   m_SortingOrder: 1
+--- !u!114 &1947393774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947393770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19d03762dc48084419e856b6d411effb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2039882417
 GameObject:
   m_ObjectHideFlags: 0

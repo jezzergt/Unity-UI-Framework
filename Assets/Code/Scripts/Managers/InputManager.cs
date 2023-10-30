@@ -5,11 +5,8 @@ namespace ProjectTemplate
 {
     public class InputManager : MonoBehaviour
     {
-        public bool AwaitingInputMap = false;
-        public string NewKeyMap;
-
         // Action Triggers
-        public bool BackInput {  get; private set; }
+        public bool BackInput { get; private set; }
         public bool UpInput { get; private set; }
         public bool DownInput { get; private set; }
         public bool LeftInput { get; private set; }
@@ -70,11 +67,6 @@ namespace ProjectTemplate
         private void Update()
         {
             UpdateInputs();
-
-            if (AwaitingInputMap)
-            {
-                AnyKey();
-            }
         }
 
         private void SetupInputActions()
@@ -95,14 +87,6 @@ namespace ProjectTemplate
             LeftInput = _leftAction.WasPressedThisFrame();
             RightInput = _rightAction.WasPressedThisFrame();
             NextInput = _nextAction.WasPressedThisFrame();
-        }
-
-        private void AnyKey()
-        {
-            if (Input.anyKey)
-            {
-                NewKeyMap = Input.anyKey.ToString();
-            }
         }
     }
 }

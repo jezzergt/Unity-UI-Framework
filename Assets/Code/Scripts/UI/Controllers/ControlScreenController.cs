@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 namespace ProjectTemplate
 {
@@ -22,6 +24,8 @@ namespace ProjectTemplate
         private string _rightInputPrimary;
         private string _rightInputSecondary;
 
+        private string _awaitingInput = ". . . .";
+
         private void OnEnable()
         {
             ControlScreen.VideoButtonClicked += Video;
@@ -31,6 +35,22 @@ namespace ProjectTemplate
             ControlScreen.BackInputPrimaryClicked += SetBackInputPrimary;
             ControlScreen.BackInputSecondaryClicked += SetBackInputSecondary;
             ControlScreen.BackInputResetClicked += SetBackInputReset;
+
+            ControlScreen.UpInputPrimaryClicked += SetUpInputPrimary;
+            ControlScreen.UpInputSecondaryClicked += SetUpInputSecondary;
+            ControlScreen.UpInputResetClicked += SetUpInputReset;
+
+            ControlScreen.DownInputPrimaryClicked += SetDownInputPrimary;
+            ControlScreen.DownInputSecondaryClicked += SetDownInputSecondary;
+            ControlScreen.DownInputResetClicked += SetDownInputReset;
+
+            ControlScreen.LeftInputPrimaryClicked += SetLeftInputPrimary;
+            ControlScreen.LeftInputSecondaryClicked += SetLeftInputSecondary;
+            ControlScreen.LeftInputResetClicked += SetLeftInputReset;
+
+            ControlScreen.RightInputPrimaryClicked += SetRightInputPrimary;
+            ControlScreen.RightInputSecondaryClicked += SetRightInputSecondary;
+            ControlScreen.RightInputResetClicked += SetRightInputReset;
         }
 
         #region Navigation Subscriber Logic
@@ -57,31 +77,172 @@ namespace ProjectTemplate
         #region Back Input Subscribers
         private void SetBackInputPrimary()
         {
-            // Temp string while awaiting user input
-            string temp = ". . . .";
+            ControlScreen.BackInputPrimaryButton.text = _awaitingInput;
 
-            // Setting temp string to button text
-            ControlScreen.BackInputPrimaryButton.text = temp;
+            StartCoroutine(WaitForKeyPress((action) =>
+            {
+                ControlScreen.BackInputPrimaryButton.text = action;
+                _backInputPrimary = action;
+            }));
 
-            // Scan for user input for a certain time
-
-                // if we detected anyKey save this key into our button text
-                // else revert to the previously set key
-           
-            // save new variable and then update InputManager
+            // We need a way to rebind the InputAction with the passed in string or perhaps a keycode?
+            // myAction.ApplyBindingOverride(newBindingPath);
         }
 
         private void SetBackInputSecondary()
         {
-            ControlScreen.BackInputPrimaryButton.text = ". . . .";
-            // if button is pressed clear the existing variable
-            // wait for user input to define the new variable
-            // save new variable and then update InputManager
+            ControlScreen.BackInputSecondaryButton.text = _awaitingInput;
+
+            StartCoroutine(WaitForKeyPress((action) =>
+            {
+                ControlScreen.BackInputSecondaryButton.text = action;
+                _backInputSecondary = action;
+            }));
         }
 
         private void SetBackInputReset()
         {
-            // Find a way to revert back to default values
+            GameData data = DataPersistenceManager.Instance.RetrieveGameData();
+
+            ControlScreen.BackInputPrimaryButton.text = data.BackInputPrimary;
+            ControlScreen.BackInputSecondaryButton.text = data.BackInputSecondary;
+        }
+        #endregion
+
+        #region Up Input Subscribers
+        private void SetUpInputPrimary()
+        {
+            ControlScreen.UpInputPrimaryButton.text = _awaitingInput;
+
+            StartCoroutine(WaitForKeyPress((action) =>
+            {
+                ControlScreen.UpInputPrimaryButton.text = action;
+                _upInputPrimary = action;
+            }));
+        }
+
+        private void SetUpInputSecondary()
+        {
+            ControlScreen.UpInputSecondaryButton.text = _awaitingInput;
+
+            StartCoroutine(WaitForKeyPress((action) =>
+            {
+                ControlScreen.UpInputSecondaryButton.text = action;
+                _upInputSecondary = action;
+            }));
+        }
+
+        private void SetUpInputReset()
+        {
+            GameData data = DataPersistenceManager.Instance.RetrieveGameData();
+
+            ControlScreen.UpInputPrimaryButton.text = data.UpInputPrimary;
+            ControlScreen.UpInputSecondaryButton.text = data.UpInputSecondary;
+        }
+        #endregion
+
+        #region Down Input Subscribers
+        private void SetDownInputPrimary()
+        {
+            ControlScreen.DownInputPrimaryButton.text = _awaitingInput;
+
+            StartCoroutine(WaitForKeyPress((action) =>
+            {
+                ControlScreen.DownInputPrimaryButton.text = action;
+                _downInputPrimary = action;
+            }));
+        }
+
+        private void SetDownInputSecondary()
+        {
+            ControlScreen.DownInputSecondaryButton.text = _awaitingInput;
+
+            StartCoroutine(WaitForKeyPress((action) =>
+            {
+                ControlScreen.DownInputSecondaryButton.text = action;
+                _downInputSecondary = action;
+            }));
+        }
+
+        private void SetDownInputReset()
+        {
+            GameData data = DataPersistenceManager.Instance.RetrieveGameData();
+
+            ControlScreen.DownInputPrimaryButton.text = data.DownInputPrimary;
+            ControlScreen.DownInputSecondaryButton.text = data.DownInputSecondary;
+        }
+        #endregion
+
+        #region Left Input Subscribers
+        private void SetLeftInputPrimary()
+        {
+            ControlScreen.LeftInputPrimaryButton.text = _awaitingInput;
+
+            StartCoroutine(WaitForKeyPress((action) =>
+            {
+                ControlScreen.LeftInputPrimaryButton.text = action;
+                _leftInputPrimary = action;
+            }));
+        }
+
+        private void SetLeftInputSecondary()
+        {
+            ControlScreen.LeftInputSecondaryButton.text = _awaitingInput;
+
+            StartCoroutine(WaitForKeyPress((action) =>
+            {
+                ControlScreen.LeftInputSecondaryButton.text = action;
+                _leftInputSecondary = action;
+            }));
+
+        }
+
+        private void SetLeftInputReset()
+        {
+            GameData data = DataPersistenceManager.Instance.RetrieveGameData();
+
+            ControlScreen.LeftInputPrimaryButton.text = data.LeftInputPrimary;
+            ControlScreen.LeftInputSecondaryButton.text = data.LeftInputSecondary;
+        }
+        #endregion
+
+        #region Right Input Subscribers
+        private void SetRightInputPrimary()
+        {
+            ControlScreen.RightInputPrimaryButton.text = _awaitingInput;
+
+            StartCoroutine(WaitForKeyPress((action) =>
+            {
+                ControlScreen.RightInputPrimaryButton.text = action;
+                _rightInputPrimary = action;
+            }));
+        }
+
+        private void SetRightInputSecondary()
+        {
+            ControlScreen.RightInputSecondaryButton.text = _awaitingInput;
+
+            StartCoroutine(WaitForKeyPress((action) =>
+            {
+                ControlScreen.RightInputSecondaryButton.text = action;
+                _rightInputSecondary = action;
+            }));
+
+        }
+
+        private void SetRightInputReset()
+        {
+            GameData data = DataPersistenceManager.Instance.RetrieveGameData();
+
+            ControlScreen.RightInputPrimaryButton.text = data.RightInputPrimary;
+            ControlScreen.RightInputSecondaryButton.text = data.RightInputSecondary;
+        }
+        #endregion
+
+        #region Reset All Keybindings
+        private void ResetAllKeyBindings()
+        {
+
         }
         #endregion
 
@@ -123,12 +284,40 @@ namespace ProjectTemplate
         {
             data.BackInputPrimary = this._backInputPrimary;
             data.BackInputSecondary = this._backInputSecondary;
+            data.UpInputPrimary = this._upInputPrimary;
+            data.UpInputSecondary = this._upInputSecondary;
             data.DownInputPrimary = this._downInputPrimary;
             data.DownInputSecondary = this._downInputSecondary;
             data.LeftInputPrimary = this._leftInputPrimary;
             data.LeftInputSecondary = this._leftInputSecondary;
             data.RightInputPrimary = this._rightInputPrimary;
             data.RightInputSecondary = this._rightInputSecondary;
+        }
+        #endregion
+
+        #region Coroutines
+        public IEnumerator WaitForKeyPress(Action<string> action)
+        {
+            KeyCode keycode;
+            bool done = false;
+            while (!done)
+            {
+                if (Input.anyKeyDown)
+                {
+                    foreach(var item in Enum.GetValues(typeof(KeyCode)))
+                    {
+                        var key = (KeyCode)item;
+                        if (Input.GetKeyDown(key))
+                        {
+                            keycode = key;
+                            action(keycode.ToString());
+                            break;
+                        }
+                    }
+                    done = true;
+                }
+                yield return action;
+            }
         }
         #endregion
     }

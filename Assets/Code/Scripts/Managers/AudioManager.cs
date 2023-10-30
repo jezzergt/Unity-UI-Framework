@@ -84,6 +84,12 @@ namespace ProjectTemplate
             _musicSource.Play();
         }
 
+        public void PlayAmbienceAudio(AudioClip clip)
+        {
+            _ambienceSource.clip = clip;
+            _ambienceSource.PlayOneShot(clip);
+        }
+
         public void PlayEffectsAudio(AudioClip clip)
         {
             _effectsSource.clip = clip;
@@ -94,12 +100,6 @@ namespace ProjectTemplate
         {
             _uiSource.clip = clip;
             _uiSource.PlayOneShot(clip);
-        }
-
-        public void PlayAmbienceAudio(AudioClip clip)
-        {
-            _ambienceSource.clip = clip;
-            _ambienceSource.PlayOneShot(clip);
         }
 
         public void PlayDefaultButtonClick()
@@ -115,21 +115,6 @@ namespace ProjectTemplate
         public void PlayDefaultButtonHover()
         {
             _uiSource.PlayOneShot(_defaultButtonHoverSound);
-        }
-
-        public void ToggleMusicAudio()
-        {
-            _musicSource.mute = !_musicSource.mute;
-        }
-
-        public void ToggleEffectsAudio()
-        {
-            _effectsSource.mute = !_effectsSource.mute;
-        }
-
-        public void ToggleUIAudio()
-        {
-            _uiSource.mute = !_uiSource.mute;
         }
         #endregion
     }
