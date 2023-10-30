@@ -128,8 +128,9 @@ Make sure you have installed Unity 2022.3+ to your Unity Hub. This project was c
 - [ ] Main Menu Navigation With Gamepad
 - [ ] Separate Controls Section For Gamepad
 - [ ] Improved UI Animations
-- [ ] New Game Difficulty/Game Modes Panel
-- [ ] Load Game Panel
+- [ ] New Game Difficulty/Game Modes Screen
+- [ ] Load Game Screen
+- [ ] Asynchronous Loading Screen
 - [ ] In-game Pause Screen
 
 See the [open issues](https://github.com/jezzergt/2DProjectTemplate/issues) for a full list of proposed features (and known issues).
