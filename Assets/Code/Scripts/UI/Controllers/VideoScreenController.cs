@@ -1,12 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.UIElements;
 
 namespace ProjectTemplate
 {
     public class VideoScreenController : MonoBehaviour, IDataPersistence
     {
         public VideoScreen VideoScreen;
+        public UIControls UIControls;
+
+        private VisualElement _root;
 
         private Resolution[] _resolutions;
         private List<Resolution> _filteredResolutions;
@@ -41,10 +45,15 @@ namespace ProjectTemplate
         private void Awake()
         {
             _additionalCameraData = Camera.main.GetUniversalAdditionalCameraData();
+            _root = GetComponent<UIDocument>().rootVisualElement;
+
+            UIControls = new UIControls();
+            UIControls.MainMenu.Enable();
         }
 
         private void OnEnable()
         {
+            // Click Event Subscribers
             VideoScreen.AudioButtonClicked += Audio;
             VideoScreen.ControlsButtonClicked += Controls;
             VideoScreen.BackButtonClicked += Back;
@@ -72,6 +81,11 @@ namespace ProjectTemplate
             VideoScreen.VsyncOffButtonClicked += SetVsyncOff;
             VideoScreen.VsyncOnButtonClicked += SetVsyncOn;
 
+            // Input System Keyboard & Gamepad Subscribers W.I.P
+            //UIControls.MainMenu.Down.performed += Down_performed;
+            //UIControls.MainMenu.Up.performed += Up_performed;
+            //UIControls.MainMenu.Submit.performed += Submit_performed;
+
         }
 
         #region Navigation Subscriber Logic
@@ -79,19 +93,103 @@ namespace ProjectTemplate
         {
             MainMenuUIManager.Instance.DisableAllScreens();
             MainMenuUIManager.Instance.EnableScreen(MainMenuUIManager.Instance.AudioScreen.Root);
+
+            MainMenuUIManager.Instance.VideoScreenHidden();
         }
 
         private void Controls()
         {
             MainMenuUIManager.Instance.DisableAllScreens();
             MainMenuUIManager.Instance.EnableScreen(MainMenuUIManager.Instance.ControlScreen.Root);
+
+            MainMenuUIManager.Instance.VideoScreenHidden();
         }
 
         private void Back()
         {
-            MainMenuUIManager.Instance.DisableAllScreens();
-            MainMenuUIManager.Instance.EnableScreen(MainMenuUIManager.Instance.HomeScreen.Root);
-            MainMenuUIManager.Instance.HomeScreenShown();
+            MainMenuUIManager.Instance.ReturnToHomeScreen();
+        }
+        #endregion
+
+        #region Keyboard & Gamepad Navigation Subscriber Logic
+        private void Down_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+        {
+            if (_root.panel.focusController.focusedElement == VideoScreen.VideoButton)
+            {
+                VideoScreen.NavigateDownToAudio();
+                return;
+            }
+
+            if (_root.panel.focusController.focusedElement == VideoScreen.AudioButton)
+            {
+                VideoScreen.NavigateDownToControls();
+                return;
+            }    
+
+            if (_root.panel.focusController.focusedElement == VideoScreen.ControlsButton)
+            {
+                VideoScreen.NavigateDownToBack();
+                return;
+            }
+
+            if (_root.panel.focusController.focusedElement == VideoScreen.BackButton)
+            {
+                VideoScreen.NavigateDownToVideo();
+                return;
+            }
+        }
+
+        private void Up_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+        {
+            if (_root.panel.focusController.focusedElement == VideoScreen.VideoButton)
+            {
+                VideoScreen.NavigateUpToBack();
+                return;
+            }
+
+            if (_root.panel.focusController.focusedElement == VideoScreen.BackButton)
+            {
+                VideoScreen.NavigateUpToControls();
+                return;
+            }
+
+            if (_root.panel.focusController.focusedElement == VideoScreen.ControlsButton)
+            {
+                VideoScreen.NavigateUpToAudio();
+                return;
+            }
+
+            if (_root.panel.focusController.focusedElement == VideoScreen.AudioButton)
+            {
+                VideoScreen.NavigateUpToVideo();
+                return;
+            }
+        }
+
+        private void Submit_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
+        {
+            if (_root.panel.focusController.focusedElement == VideoScreen.VideoButton)
+            {
+                // Go Sideways to start modifying with the settings?
+            }
+
+            if (_root.panel.focusController.focusedElement == VideoScreen.AudioButton)
+            {
+                AudioManager.Instance.PlayDefaultButtonClick();
+                Audio();
+            }
+
+            if (_root.panel.focusController.focusedElement == VideoScreen.ControlsButton)
+            {
+                AudioManager.Instance.PlayDefaultButtonClick();
+                Controls();
+            }
+
+            if (_root.panel.focusController.focusedElement == VideoScreen.BackButton)
+            {
+                AudioManager.Instance.PlayDefaultButtonClick();
+                Back();
+            }
         }
         #endregion
 

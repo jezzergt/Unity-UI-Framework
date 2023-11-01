@@ -1,9 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.UIElements;
-using UnityEngine.Events;
-using UnityEngine.EventSystems;
-using System.Collections.Generic;
 
 namespace ProjectTemplate
 {
@@ -36,10 +33,10 @@ namespace ProjectTemplate
 
         #region Buttons & Labels
         // Navigation Buttons
-        Button _continueButton;
-        Button _newGameButton;
-        Button _settingsButton;
-        Button _quitButton;
+        public Button ContinueButton;
+        public Button NewGameButton;
+        public Button SettingsButton;
+        public Button QuitButton;
 
         // Labels
         public Label GameVersionLabel;
@@ -51,6 +48,7 @@ namespace ProjectTemplate
         private void Awake()
         {
             SetVisualElements();
+            //FocusFirstElement();
             RegisterButtonCallbacks();
             ShowGameVersionInfo();
         }
@@ -59,29 +57,43 @@ namespace ProjectTemplate
         {
             Root = ControllerDocument.rootVisualElement;
 
-            _continueButton = Root.Q<Button>(_continueButtonID);
-            _newGameButton = Root.Q<Button>(_newGameButtonID);
-            _settingsButton = Root.Q<Button>(_settingsButtonID);
-            _quitButton = Root.Q<Button>(_quitButtonID);
+            ContinueButton = Root.Q<Button>(_continueButtonID);
+            NewGameButton = Root.Q<Button>(_newGameButtonID);
+            SettingsButton = Root.Q<Button>(_settingsButtonID);
+            QuitButton = Root.Q<Button>(_quitButtonID);
 
             GameVersionLabel = Root.Q<Label>(_gameVersionLabelID);
         }
 
-        private void RegisterButtonCallbacks()
+        public void FocusFirstElement()
         {
-            _continueButton?.RegisterCallback<ClickEvent>(ClickContinueButton);
-
-            _newGameButton?.RegisterCallback<ClickEvent>(ClickNewGameButton);
-            _newGameButton?.RegisterCallback<PointerOverEvent>(_evt => AudioManager.Instance.PlayDefaultButtonHover());
-
-            _settingsButton?.RegisterCallback<ClickEvent>(ClickSettingsButton);
-            _settingsButton?.RegisterCallback<PointerOverEvent>(_evt => AudioManager.Instance.PlayDefaultButtonHover());
-
-            _quitButton?.RegisterCallback<ClickEvent>(ClickQuitButton);
-            _quitButton?.RegisterCallback<PointerOverEvent>(_evt => AudioManager.Instance.PlayDefaultButtonHover());
+            NewGameButton.Focus();
+            NewGameButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            NewGameButton.transform.scale = new Vector2(1.2f, 1.2f);
         }
 
-        #region Navigation Publishers
+        public void FocusReturnElement()
+        {
+            SettingsButton.Focus();
+            SettingsButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            SettingsButton.transform.scale = new Vector2(1.2f, 1.2f);
+        }
+
+        private void RegisterButtonCallbacks()
+        {
+            ContinueButton?.RegisterCallback<ClickEvent>(ClickContinueButton);
+
+            NewGameButton?.RegisterCallback<ClickEvent>(ClickNewGameButton);
+            NewGameButton?.RegisterCallback<PointerOverEvent>(_evt => AudioManager.Instance.PlayDefaultButtonHover());
+
+            SettingsButton?.RegisterCallback<ClickEvent>(ClickSettingsButton);
+            SettingsButton?.RegisterCallback<PointerOverEvent>(_evt => AudioManager.Instance.PlayDefaultButtonHover());
+
+            QuitButton?.RegisterCallback<ClickEvent>(ClickQuitButton);
+            QuitButton?.RegisterCallback<PointerOverEvent>(_evt => AudioManager.Instance.PlayDefaultButtonHover());
+        }
+
+        #region Mouse Navigation Publishers
         void ClickContinueButton(ClickEvent evt)
         {
             ContinueButtonClicked?.Invoke();
@@ -106,11 +118,85 @@ namespace ProjectTemplate
         }
         #endregion
 
+        #region Keyboard & Gampad Navigation Logic
+        public void NavigateDownToSettings()
+        {
+            NewGameButton.style.color = MainMenuUIManager.DefaultButtonColor;
+            NewGameButton.transform.scale = new Vector2(1f, 1f);
+            NewGameButton.Blur();
+
+            SettingsButton.Focus();
+            SettingsButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            SettingsButton.transform.scale = new Vector2(1.2f, 1.2f);
+            AudioManager.Instance.PlayDefaultButtonHover();
+        }
+
+        public void NavigateDownToQuit()
+        {
+            SettingsButton.style.color = MainMenuUIManager.DefaultButtonColor;
+            SettingsButton.transform.scale = new Vector2(1f, 1f);
+            SettingsButton.Blur();
+
+            QuitButton.Focus();
+            QuitButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            QuitButton.transform.scale = new Vector2(1.2f, 1.2f);
+            AudioManager.Instance.PlayDefaultButtonHover();
+        }
+
+        public void NavigateDownToNewGame()
+        {
+            QuitButton.style.color = MainMenuUIManager.DefaultButtonColor;
+            QuitButton.transform.scale = new Vector2(1f, 1f);
+            QuitButton.Blur();
+
+            NewGameButton.Focus();
+            NewGameButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            NewGameButton.transform.scale = new Vector2(1.2f, 1.2f);
+            AudioManager.Instance.PlayDefaultButtonHover();
+        }
+
+        public void NavigateUpToSettings()
+        {
+            QuitButton.style.color = MainMenuUIManager.DefaultButtonColor;
+            QuitButton.transform.scale = new Vector2(1f, 1f);
+            QuitButton.Blur();
+
+            SettingsButton.Focus();
+            SettingsButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            SettingsButton.transform.scale = new Vector2(1.2f, 1.2f);
+            AudioManager.Instance.PlayDefaultButtonHover();
+        }
+
+        public void NavigateUpToQuit()
+        {
+            NewGameButton.style.color = MainMenuUIManager.DefaultButtonColor;
+            NewGameButton.transform.scale = new Vector2(1f, 1f);
+            NewGameButton.Blur();
+
+            QuitButton.Focus();
+            QuitButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            QuitButton.transform.scale = new Vector2(1.2f, 1.2f);
+            AudioManager.Instance.PlayDefaultButtonHover();
+        }
+
+        public void NavigateUpToNewGame()
+        {
+            SettingsButton.style.color = MainMenuUIManager.DefaultButtonColor;
+            SettingsButton.transform.scale = new Vector2(1f, 1f);
+            SettingsButton.Blur();
+
+            NewGameButton.Focus();
+            NewGameButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            NewGameButton.transform.scale = new Vector2(1.2f, 1.2f);
+            AudioManager.Instance.PlayDefaultButtonHover();
+        }
+        #endregion
+
         #region Misc Publishers
         public void ShowGameVersionInfo()
         {
             GameVersionLabel.text = "Version " + Application.version;
-            
+
             // Why doesn't this get called?
             //DisplayGameVerion?.Invoke();
         }

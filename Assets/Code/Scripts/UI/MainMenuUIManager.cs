@@ -1,6 +1,6 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.InputSystem;
 
 namespace ProjectTemplate
 {
@@ -15,6 +15,7 @@ namespace ProjectTemplate
         [HideInInspector]
         public static Color SelectedButtonColor = new Color(1f, 0.8156f, 0.4862f, 1f);
         public static Color NonSelectedButtonColor = new Color(1f, 0.8156f, 0.4862f, 0f);
+        public static Color DefaultButtonColor = new Color(1f, 1f, 1f, 1f);
 
         #region Singleton & Awake
         private static MainMenuUIManager _instance;
@@ -41,6 +42,11 @@ namespace ProjectTemplate
             {
                 _instance = this;
             }
+
+            UIControls uiControls = new UIControls();
+            uiControls.MainMenu.Enable();
+
+            uiControls.MainMenu.Back.performed += Back_performed;  
         }
         #endregion
 
@@ -49,20 +55,7 @@ namespace ProjectTemplate
             HomeScreenShown();
         }
 
-        private void Update()
-        {
-            if (HomeScreen.ScreenShown == false)
-            {
-                if (InputManager.Instance.BackInput)
-                {
-                    AudioManager.Instance.PlayDefaultBackButtonClick();
-                    DisableAllScreens();
-                    EnableScreen(HomeScreen.Root);
-                    HomeScreenShown();
-                }
-            }
-        }
-
+        #region Enable & Disable Screen Functions
         public void DisableAllScreens()
         {
             HomeScreen.Root.style.display = DisplayStyle.None;
@@ -80,7 +73,9 @@ namespace ProjectTemplate
         {
             visualElement.style.display = DisplayStyle.Flex;
         }
+        #endregion
 
+        #region ScreenShown & Hidden Functions
         public void HomeScreenShown()
         {
             HomeScreen.ScreenShown = true;
@@ -89,6 +84,40 @@ namespace ProjectTemplate
         public void HomeScreenHidden()
         {
             HomeScreen.ScreenShown = false;
+        }
+
+        public void VideoScreenShown()
+        {
+            VideoScreen.ScreenShown = true;
+            //VideoScreen.FocusFirstElement();
+        }
+
+        public void VideoScreenHidden()
+        {
+            VideoScreen.ScreenShown = false;
+        }
+        #endregion
+
+        #region Input Action Subscribers
+        private void Back_performed(InputAction.CallbackContext context)
+        {
+            if (context.performed)
+            {
+                if (HomeScreen.ScreenShown == false)
+                {
+                    ReturnToHomeScreen();
+                }
+            }
+        }
+        #endregion
+
+        public void ReturnToHomeScreen()
+        {
+            AudioManager.Instance.PlayDefaultBackButtonClick();
+            DisableAllScreens();
+            EnableScreen(HomeScreen.Root);
+            //HomeScreen.FocusReturnElement();
+            HomeScreenShown();
         }
     }
 }

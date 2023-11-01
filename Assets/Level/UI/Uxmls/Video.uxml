@@ -2,9 +2,9 @@
     <Style src="project://database/Assets/Level/UI/StyleSheets/MenuButtons.uss?fileID=7433441132597879392&amp;guid=e072f7f4662ddae4fbb0ae74c96067e3&amp;type=3#MenuButtons" />
     <Style src="project://database/Assets/Level/UI/StyleSheets/MenuContainer.uss?fileID=7433441132597879392&amp;guid=5f6202b616bae84478451c81e971597f&amp;type=3#MenuContainer" />
     <Style src="project://database/Assets/Level/UI/StyleSheets/TitleText.uss?fileID=7433441132597879392&amp;guid=e9ff4a6e3f89431498844270f2bc0fc0&amp;type=3#TitleText" />
-    <ui:VisualElement name="Container" class="container" style="flex-grow: 1; background-color: rgb(165, 170, 195); background-image: url(&apos;project://database/Assets/Art/Textures/wp2370512-gradient-hd-wallpapers.jpg?fileID=2800000&amp;guid=040062a21699ca64f94974dca614055b&amp;type=3#wp2370512-gradient-hd-wallpapers&apos;);">
+    <ui:VisualElement name="Container" class="container" style="flex-grow: 1; background-color: rgb(165, 170, 195); background-image: url(&apos;project://database/Assets/Art/Textures/Backgrounds/wallpaper-gradient01.jpg?fileID=2800000&amp;guid=040062a21699ca64f94974dca614055b&amp;type=3#wallpaper-gradient01&apos;);">
         <ui:VisualElement name="TitleContainer" class="text" style="flex-grow: 1; flex-basis: 10%; margin-top: 0; margin-right: 25px; margin-bottom: 0; margin-left: 25px; padding-top: 10px;">
-            <ui:Label tabindex="-1" text="PROJECT TEMPLATE" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TitleText" class="text" />
+            <ui:Label tabindex="-1" text="ui framework" parse-escape-sequences="true" display-tooltip-when-elided="true" name="TitleText" class="text" />
         </ui:VisualElement>
         <ui:VisualElement name="BodyContainer" style="flex-grow: 1; flex-direction: row; margin-bottom: 0; margin-top: 20px; -unity-font-definition: initial; flex-basis: 40%; background-color: rgba(0, 0, 0, 0.3);">
             <ui:VisualElement name="NavContainer" class="container" style="flex-grow: 1; flex-basis: 30%; flex-direction: column; justify-content: center; align-self: auto; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 80px; -unity-text-align: upper-right; flex-wrap: nowrap; align-items: center;">
@@ -54,7 +54,7 @@
                     </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:VisualElement name="BackContainer" style="flex-grow: 1; position: absolute; right: 140px; top: 600px; flex-direction: row;">
-                    <ui:VisualElement style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Art/Textures/back-button2.png?fileID=2800000&amp;guid=d3ef53c141c4724429613eba322c170b&amp;type=3#back-button2&apos;); width: 40px; height: 40px; top: 3px; left: -10px;" />
+                    <ui:VisualElement style="flex-grow: 1; background-image: url(&apos;project://database/Assets/Art/Textures/Icons/back-icon.png?fileID=2800000&amp;guid=d3ef53c141c4724429613eba322c170b&amp;type=3#back-icon&apos;); width: 40px; height: 40px; top: 3px; left: -10px;" />
                     <ui:Label tabindex="-1" text="esc" parse-escape-sequences="true" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); font-size: 35px; -unity-font: url(&apos;project://database/Assets/TextMesh%20Pro/Examples%20&amp;%20Extras/Fonts/Bangers.ttf?fileID=12800000&amp;guid=5dd49b3eacc540408c98eee0de38e0f1&amp;type=3#Bangers&apos;); -unity-text-align: middle-center; padding-left: 8px;" />
                 </ui:VisualElement>
                 <ui:VisualElement name="ApplyContainer" style="flex-grow: 1; position: absolute; right: 300px; top: 600px; flex-direction: row; opacity: 0;">

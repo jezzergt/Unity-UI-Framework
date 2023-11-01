@@ -6,6 +6,9 @@ namespace ProjectTemplate
 {
     public class VideoScreen : MonoBehaviour
     {
+        [HideInInspector]
+        public static bool ScreenShown = false;
+
         #region Events
         // Navigation Events
         public static event Action AudioButtonClicked;
@@ -44,6 +47,7 @@ namespace ProjectTemplate
 
         #region Element ID's
         // Navigation ID's
+        const string _videoButtonID = "ButtonVideo";
         const string _audioButtonID = "ButtonAudio";
         const string _controlsButtonID = "ButtonControls";
         const string _backButtonID = "ButtonBack";
@@ -82,9 +86,10 @@ namespace ProjectTemplate
 
         #region Buttons & Labels
         // Navigation Buttons
-        Button _audioButton;
-        Button _controlsButton;
-        Button _backButton;
+        public Button VideoButton;
+        public Button AudioButton;
+        public Button ControlsButton;
+        public Button BackButton;
 
         // Resolution Buttons
         Button _prevButton;
@@ -135,9 +140,10 @@ namespace ProjectTemplate
         {
             Root = ControllerDocument.rootVisualElement;
 
-            _audioButton = Root.Q<Button>(_audioButtonID);
-            _controlsButton = Root.Q<Button>(_controlsButtonID);
-            _backButton = Root.Q<Button>(_backButtonID);
+            VideoButton = Root.Q<Button>(_videoButtonID);
+            AudioButton = Root.Q<Button>(_audioButtonID);
+            ControlsButton = Root.Q<Button>(_controlsButtonID);
+            BackButton = Root.Q<Button>(_backButtonID);
 
             _prevButton = Root.Q<Button>(_prevResolutionButtonID);
             _nextButton = Root.Q<Button>(_nextResolutionButtonID);
@@ -164,16 +170,23 @@ namespace ProjectTemplate
             LabelResolution = Root.Q<Label>(CurrentResolutionLabelID);
         }
 
+        public void FocusFirstElement()
+        {
+            VideoButton.Focus();
+            VideoButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            VideoButton.transform.scale = new Vector2(1.2f, 1.2f);
+        }
+
         private void RegisterButtonCallbacks()
         {
-            _audioButton?.RegisterCallback<ClickEvent>(ClickAudioButton);
-            _audioButton?.RegisterCallback<PointerOverEvent>(_evt => AudioManager.Instance.PlayDefaultButtonHover());
+            AudioButton?.RegisterCallback<ClickEvent>(ClickAudioButton);
+            AudioButton?.RegisterCallback<PointerOverEvent>(_evt => AudioManager.Instance.PlayDefaultButtonHover());
 
-            _controlsButton?.RegisterCallback<ClickEvent>(ClickControlsButton);
-            _controlsButton?.RegisterCallback<PointerOverEvent>(_evt => AudioManager.Instance.PlayDefaultButtonHover());
+            ControlsButton?.RegisterCallback<ClickEvent>(ClickControlsButton);
+            ControlsButton?.RegisterCallback<PointerOverEvent>(_evt => AudioManager.Instance.PlayDefaultButtonHover());
 
-            _backButton?.RegisterCallback<ClickEvent>(ClickBackButton);
-            _backButton?.RegisterCallback<PointerOverEvent>(_evt => AudioManager.Instance.PlayDefaultButtonHover());
+            BackButton?.RegisterCallback<ClickEvent>(ClickBackButton);
+            BackButton?.RegisterCallback<PointerOverEvent>(_evt => AudioManager.Instance.PlayDefaultButtonHover());
 
             _prevButton?.RegisterCallback<ClickEvent>(ClickPreviousResolutionButton);
             _nextButton?.RegisterCallback<ClickEvent>(ClickNextResolutionButton);
@@ -215,6 +228,104 @@ namespace ProjectTemplate
         {
             AudioManager.Instance.PlayDefaultBackButtonClick();
             BackButtonClicked?.Invoke();
+        }
+        #endregion
+
+        #region Keyboard & Gampad Navigation Logic
+        public void NavigateDownToAudio()
+        {
+            VideoButton.style.color = MainMenuUIManager.DefaultButtonColor;
+            VideoButton.transform.scale = new Vector2(1f, 1f);
+            VideoButton.Blur();
+
+            AudioButton.Focus();
+            AudioButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            AudioButton.transform.scale = new Vector2(1.2f, 1.2f);
+            AudioManager.Instance.PlayDefaultButtonHover();
+        }
+
+        public void NavigateDownToControls()
+        {
+            AudioButton.style.color = MainMenuUIManager.DefaultButtonColor;
+            AudioButton.transform.scale = new Vector2(1f, 1f);
+            AudioButton.Blur();
+
+            ControlsButton.Focus();
+            ControlsButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            ControlsButton.transform.scale = new Vector2(1.2f, 1.2f);
+            AudioManager.Instance.PlayDefaultButtonHover();
+        }
+
+        public void NavigateDownToBack()
+        {
+            ControlsButton.style.color = MainMenuUIManager.DefaultButtonColor;
+            ControlsButton.transform.scale = new Vector2(1f, 1f);
+            ControlsButton.Blur();
+
+            BackButton.Focus();
+            BackButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            BackButton.transform.scale = new Vector2(1.2f, 1.2f);
+            AudioManager.Instance.PlayDefaultButtonHover();
+        }
+
+        public void NavigateDownToVideo()
+        {
+            BackButton.style.color = MainMenuUIManager.DefaultButtonColor;
+            BackButton.transform.scale = new Vector2(1f, 1f);
+            BackButton.Blur();
+
+            VideoButton.Focus();
+            VideoButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            VideoButton.transform.scale = new Vector2(1.2f, 1.2f);
+            AudioManager.Instance.PlayDefaultButtonHover();
+        }
+
+        public void NavigateUpToVideo()
+        {
+            AudioButton.style.color = MainMenuUIManager.DefaultButtonColor;
+            AudioButton.transform.scale = new Vector2(1f, 1f);
+            AudioButton.Blur();
+
+            VideoButton.Focus();
+            VideoButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            VideoButton.transform.scale = new Vector2(1.2f, 1.2f);
+            AudioManager.Instance.PlayDefaultButtonHover();
+        }
+
+        public void NavigateUpToBack()
+        {
+            VideoButton.style.color = MainMenuUIManager.DefaultButtonColor;
+            VideoButton.transform.scale = new Vector2(1f, 1f);
+            VideoButton.Blur();
+
+            BackButton.Focus();
+            BackButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            BackButton.transform.scale = new Vector2(1.2f, 1.2f);
+            AudioManager.Instance.PlayDefaultButtonHover();
+        }
+
+        public void NavigateUpToControls()
+        {
+            BackButton.style.color = MainMenuUIManager.DefaultButtonColor;
+            BackButton.transform.scale = new Vector2(1f, 1f);
+            BackButton.Blur();
+
+            ControlsButton.Focus();
+            ControlsButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            ControlsButton.transform.scale = new Vector2(1.2f, 1.2f);
+            AudioManager.Instance.PlayDefaultButtonHover();
+        }
+
+        public void NavigateUpToAudio()
+        {
+            ControlsButton.style.color = MainMenuUIManager.DefaultButtonColor;
+            ControlsButton.transform.scale = new Vector2(1f, 1f);
+            ControlsButton.Blur();
+
+            AudioButton.Focus();
+            AudioButton.style.color = MainMenuUIManager.SelectedButtonColor;
+            AudioButton.transform.scale = new Vector2(1.2f, 1.2f);
+            AudioManager.Instance.PlayDefaultButtonHover();
         }
         #endregion
 
