@@ -6,13 +6,13 @@
   <h1 align="center">Unity UI Framework</h1>
 
   <p align="center">
-    <a href="https://github.com/jezzergt/2DProjectTemplate#getting-started">Get Started</a>
+    <a href="https://github.com/jezzergt/Unity-UI-Frameworke#getting-started">Get Started</a>
     ·
-     <a href="https://github.com/jezzergt/2DProjectTemplate#usage">Usage</a>
+     <a href="https://github.com/jezzergt/Unity-UI-Framework#usage">Usage</a>
     ·
-     <a href="https://github.com/jezzergt/2DProjectTemplate#roadmap">Roadmap</a>
+     <a href="https://github.com/jezzergt/Unity-UI-Framework#roadmap">Roadmap</a>
     ·
-    <a href="https://github.com/jezzergt/2DProjectTemplate/issues">Report Bug</a>
+    <a href="https://github.com/jezzergt/Unity-UI-Framework/issues">Report Bug</a>
   </p>
 </div>
 
@@ -45,7 +45,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![ProjectTemplate_Editor](https://github.com/jezzergt/2DProjectTemplate/assets/25508345/38e53d7d-2c2c-41d8-950d-6a54874e863b)
+![UIFramework_Editor](https://github.com/jezzergt/Unity-UI-Framework/assets/25508345/78c11401-4a9b-44ae-97e1-6aa13f2ed083)
+
 
 Unity UI Framework was created to rapidly speed up development of new projects. It does this by including several essential manager classes, well structuered project file organisation and a fully featured MainMenu with sample scene. Full feature list below.
 
@@ -57,7 +58,7 @@ Feature List:
 * Documentation provided allows for easy modifications & extendability.
 * Good performance
 
-There are more features planned, for more information please check the <a href="https://github.com/jezzergt/2DProjectTemplate#roadmap">Roadmap</a>
+There are more features planned, for more information please check the <a href="https://github.com/jezzergt/Unity-UI-Framework#roadmap">Roadmap</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -80,7 +81,8 @@ Follow the instructions below to get started:
 
 Make sure you have installed Unity 2022.3+ to your Unity Hub. This project was created using 2022.3.10f1, at the time of writing this is the official 2022 LTS version.
 
-![2022 3 10f1 Version](https://github.com/jezzergt/2DProjectTemplate/assets/25508345/faff981f-1f18-4728-8b34-552f650c52a5)
+![2022 3 10f1 Version](https://github.com/jezzergt/Unity-UI-Framework/assets/25508345/ca89126c-df79-4e35-bfa1-b011f541bfd6)
+
 
 ### Installation
 
@@ -91,7 +93,8 @@ Make sure you have installed Unity 2022.3+ to your Unity Hub. This project was c
    
 2. Unity Hub - Add project from disk, selecting the newly cloned project directory
 
-![Add Projects](https://github.com/jezzergt/2DProjectTemplate/assets/25508345/3b0e4de4-b0d2-4a08-8d29-0d860beb48a0)
+
+![Add Projects](https://github.com/jezzergt/Unity-UI-Framework/assets/25508345/7b10b35f-ff36-4932-a657-cdf3a811f175)
 
 
 3. Rename Project the project to whatever you like by renaming the root folder
@@ -99,7 +102,7 @@ Make sure you have installed Unity 2022.3+ to your Unity Hub. This project was c
 
 4. Launch the project via Unity's Hub. 
 
-![Launch Project](https://github.com/jezzergt/2DProjectTemplate/assets/25508345/19f5941a-e1e4-4ced-87c9-b19b06eac123)
+![Launch Project](https://github.com/jezzergt/Unity-UI-Framework/assets/25508345/e9c76e4b-6adf-4881-94c6-9f72047fe5bb)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -109,11 +112,12 @@ Make sure you have installed Unity 2022.3+ to your Unity Hub. This project was c
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-[Documentation](https://github.com/jezzergt/2DProjectTemplate/wiki)
+[Documentation](https://github.com/jezzergt/Unity-UI-Framework/wiki)
 
-![ProjectTemplate_VideoSettings](https://github.com/jezzergt/2DProjectTemplate/assets/25508345/5cff9ffe-d9f0-4d30-a30c-0f725de6c899)
-![ProjectTemplate_AudioSettings](https://github.com/jezzergt/2DProjectTemplate/assets/25508345/ba981b8f-8946-47ce-962b-2952d9aeb05e)
-![ProjectTemplate_ControlSettings](https://github.com/jezzergt/2DProjectTemplate/assets/25508345/a5bcc5cd-007c-4e0d-8a76-fc5ba8371e68)
+![UIFramework_VideoSettings](https://github.com/jezzergt/Unity-UI-Framework/assets/25508345/6d8f4362-e29d-4aee-a10e-79127409b134)
+![UIFramework_AudioSettings](https://github.com/jezzergt/Unity-UI-Framework/assets/25508345/fc7ebc21-ebc2-4881-89b3-a8bf5d7faff9)
+![UIFramework_ControlSettings](https://github.com/jezzergt/Unity-UI-Framework/assets/25508345/74c0b5e7-9f89-417c-ac62-de803c5fa80e)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,7 +137,7 @@ Make sure you have installed Unity 2022.3+ to your Unity Hub. This project was c
 - [ ] Asynchronous Loading Screen
 - [ ] In-game Pause Screen
 
-See the [open issues](https://github.com/jezzergt/2DProjectTemplate/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/jezzergt/Unity-UI-Framework/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
