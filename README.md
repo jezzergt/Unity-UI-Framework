@@ -3,7 +3,7 @@
 <br />
 <div align="center">
  
-  <h1 align="center">Unity 2D (URP) Project Template</h1>
+  <h1 align="center">Unity UI Framework</h1>
 
   <p align="center">
     <a href="https://github.com/jezzergt/2DProjectTemplate#getting-started">Get Started</a>
@@ -47,7 +47,7 @@
 
 ![ProjectTemplate_Editor](https://github.com/jezzergt/2DProjectTemplate/assets/25508345/38e53d7d-2c2c-41d8-950d-6a54874e863b)
 
-Project Template was created to rapidly speed up development of new projects. It does this by including several essential manager classes, well structuered project file organisation and a fully featured MainMenu with sample scene. Full feature list below.
+Unity UI Framework was created to rapidly speed up development of new projects. It does this by including several essential manager classes, well structuered project file organisation and a fully featured MainMenu with sample scene. Full feature list below.
 
 Feature List:
 * Manager classes include; Audio, Level, Input, DataPersistence & MainMenuUI.
