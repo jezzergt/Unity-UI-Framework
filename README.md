@@ -86,7 +86,7 @@ Make sure you have installed Unity 2022.3+ to your Unity Hub. This project was c
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/jezzergt/2DProjectTemplate.git
+   git clone https://github.com/jezzergt/Unity-UI-Framework.git
    ```
    
 2. Unity Hub - Add project from disk, selecting the newly cloned project directory
