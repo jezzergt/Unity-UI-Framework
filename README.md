@@ -6,7 +6,7 @@
   <h1 align="center">Unity UI Framework</h1>
 
   <p align="center">
-    <a href="https://github.com/jezzergt/Unity-UI-Frameworke#getting-started">Get Started</a>
+    <a href="https://github.com/jezzergt/Unity-UI-Framework#getting-started">Get Started</a>
     ·
      <a href="https://github.com/jezzergt/Unity-UI-Framework#usage">Usage</a>
     ·
