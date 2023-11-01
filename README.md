@@ -1,6 +1,5 @@
 <a name="readme-top"></a>
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
  
@@ -51,22 +50,19 @@
 Project Template was created to rapidly speed up development of new projects. It does this by including several essential manager classes, well structuered project file organisation and a fully featured MainMenu with sample scene. Full feature list below.
 
 Feature List:
-* Manager classes include; Audio, Level, Input, DataPersistenc & MainMenuUI.
+* Manager classes include; Audio, Level, Input, DataPersistence & MainMenuUI.
 * Well structured project files with accompanying documentation to keep everything tidy.
-* Fully features Main Menu that includes; Home, Video, Audio & Controls screens. (Built using Unity's UI Toolkit)
-* Data serialisation & deserialisation for settings logged to JSON.
-* Documentation provided making the project easily modifable & extendable.
+* Fully featured Main Menu UI that includes; Home, Video, Audio & Controls screens. (Built using Unity's UI Toolkit)
+* Data serialisation & deserialisation for settings logged using JSON.
+* Documentation provided allows for easy modifications & extendability.
 * Good performance
 
-There are many more features planned, for more information please check the RoadMap.
+There are more features planned, for more information please check the <a href="https://github.com/jezzergt/2DProjectTemplate#roadmap">Roadmap</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ### Built With
-
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
 
 
 * [![Made with Unity](https://img.shields.io/badge/Made%20with-Unity-57b9d3.svg?style=for-the-badge&logo=unity)](https://unity3d.com)
@@ -78,7 +74,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Follow the instructions below to quickly set yourself up with the Project Template
+Follow the instructions below to get started:
 
 ### Prerequisites
 
@@ -88,22 +84,20 @@ Make sure you have installed Unity 2022.3+ to your Unity Hub. This project was c
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
 1. Clone the repo
    ```sh
    git clone https://github.com/jezzergt/2DProjectTemplate.git
    ```
    
-2. Unity Hub - Add project from disk
+2. Unity Hub - Add project from disk, selecting the newly cloned project directory
 
 ![Add Projects](https://github.com/jezzergt/2DProjectTemplate/assets/25508345/3b0e4de4-b0d2-4a08-8d29-0d860beb48a0)
 
 
-3. Rename Project [Optional]
+3. Rename Project the project to whatever you like by renaming the root folder
 
 
-4. Launch Project via Unity's Hub 
+4. Launch the project via Unity's Hub. 
 
 ![Launch Project](https://github.com/jezzergt/2DProjectTemplate/assets/25508345/19f5941a-e1e4-4ced-87c9-b19b06eac123)
 
@@ -115,7 +109,7 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-[Documentation](https://example.com)
+[Documentation](https://github.com/jezzergt/2DProjectTemplate/wiki)
 
 ![ProjectTemplate_VideoSettings](https://github.com/jezzergt/2DProjectTemplate/assets/25508345/5cff9ffe-d9f0-4d30-a30c-0f725de6c899)
 ![ProjectTemplate_AudioSettings](https://github.com/jezzergt/2DProjectTemplate/assets/25508345/ba981b8f-8946-47ce-962b-2952d9aeb05e)
@@ -134,8 +128,9 @@ _Below is an example of how you can instruct your audience on installing and set
 - [ ] Main Menu Navigation With Gamepad
 - [ ] Separate Controls Section For Gamepad
 - [ ] Improved UI Animations
-- [ ] New Game Difficulty/Game Modes Panel
-- [ ] Load Game Panel
+- [ ] New Game Difficulty/Game Modes Screen
+- [ ] Load Game Screen
+- [ ] Asynchronous Loading Screen
 - [ ] In-game Pause Screen
 
 See the [open issues](https://github.com/jezzergt/2DProjectTemplate/issues) for a full list of proposed features (and known issues).
