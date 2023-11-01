@@ -102,7 +102,7 @@ Make sure you have installed Unity 2022.3+ to your Unity Hub. This project was c
 
 4. Launch the project via Unity's Hub. 
 
-![Launch Project](https://github.com/jezzergt/Unity-UI-Framework/assets/25508345/e9c76e4b-6adf-4881-94c6-9f72047fe5bb)
+![Launch Project](https://github.com/jezzergt/Unity-UI-Framework/assets/25508345/ae88d6c6-923c-4330-9d4b-eba703c4d940)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
