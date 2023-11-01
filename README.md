@@ -112,8 +112,11 @@ Make sure you have installed Unity 2022.3+ to your Unity Hub. This project was c
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-[Documentation](https://github.com/jezzergt/Unity-UI-Framework/wiki)
+### [Documentation](https://github.com/jezzergt/Unity-UI-Framework/wiki)
 
+<br />
+
+![UIFramework_MainMenu](https://github.com/jezzergt/Unity-UI-Framework/assets/25508345/3b91f0b8-b436-4a94-92ec-5cebfbc2de74)
 ![UIFramework_VideoSettings](https://github.com/jezzergt/Unity-UI-Framework/assets/25508345/6d8f4362-e29d-4aee-a10e-79127409b134)
 ![UIFramework_AudioSettings](https://github.com/jezzergt/Unity-UI-Framework/assets/25508345/fc7ebc21-ebc2-4881-89b3-a8bf5d7faff9)
 ![UIFramework_ControlSettings](https://github.com/jezzergt/Unity-UI-Framework/assets/25508345/74c0b5e7-9f89-417c-ac62-de803c5fa80e)
