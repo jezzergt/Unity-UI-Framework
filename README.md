@@ -51,8 +51,8 @@
 Unity UI Framework was created to rapidly speed up development of new projects. It does this by including several essential manager classes, well structuered project file organisation and a fully featured MainMenu with sample scene. Full feature list below.
 
 Feature List:
-* Manager classes include; Audio, Level, Input, DataPersistence & MainMenuUI.
-* Well structured project files with accompanying documentation to keep everything tidy.
+* Manager classes include; Audio, Level, DataPersistence & MainMenuUI.
+* Well structured project files with accompanying documentation to keep everything tidy.inp
 * Fully featured Main Menu UI that includes; Home, Video, Audio & Controls screens. (Built using Unity's UI Toolkit)
 * Data serialisation & deserialisation for settings logged using JSON.
 * Documentation provided allows for easy modifications & extendability.
