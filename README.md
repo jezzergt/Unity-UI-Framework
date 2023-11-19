@@ -160,7 +160,7 @@ Distributed under the MIT License.
 
 Jeremy GT - jeremy.gt@outlook.com
 
-Project Link: [https://github.com/jezzergt/2DProjectTemplate]
+Project Link: [https://github.com/jezzergt/Unity-UI-Framework]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
