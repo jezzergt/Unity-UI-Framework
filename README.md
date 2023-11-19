@@ -175,8 +175,6 @@ Project Link: [https://github.com/jezzergt/Unity-UI-Framework]
 * MainMenu Background Music - 'Within Our Nature' by Scott Buckley - released under CC-BY 4.0. https://www.scottbuckley.com.au
 * MainMenu UI Sound Effects - JDSherbert https://jdsherbert.itch.io/ultimate-ui-sfx-pack
 * Awesome Template - https://github.com/othneildrew/Best-README-Template
-* [Choose an Open Source License](https://choosealicense.com)
-* [Img Shields](https://shields.io)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
